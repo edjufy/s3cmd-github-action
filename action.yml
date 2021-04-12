@@ -1,0 +1,33 @@
+name: "S3cmd GitHub action"
+description: "Use the S3cmd in your GitHub action"
+author: "edjufy GmbH"
+branding:
+  icon: command
+  color: green
+inputs:
+  s3cmd_command:
+    description: 'Command to run with the s3cmd cli'
+    required: true
+  access_key:
+    description: 'your access key'
+    required: true
+  secret_key:
+    description: 'your secret key'
+    required: true
+  host_base:
+    description: 'your s3 hostname (default: s3.amazonaws.com)'
+    required: false
+    default: 's3.amazonaws.com'
+  bucket_location:
+    description: 'your s3 bucket location (default: US)'
+    required: false
+    default: 'US'
+runs:
+  using: docker
+  image: 'docker://ghcr.io/edjufy/s3cmd-github-action:1.0.0'
+  args:
+    - ${{ inputs.s3cmd_command }}
+    - ${{ inputs.access_key }}
+    - ${{ inputs.secret_key }}
+    - ${{ inputs.host_base }}
+    - ${{ inputs.bucket_location }}

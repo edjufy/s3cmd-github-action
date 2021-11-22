@@ -18,7 +18,7 @@ jobs:
     
     steps:
       - name: Run S3cmd
-        uses: edjufy/s3cmd-github-action@v1.0.0
+        uses: edjufy/s3cmd-github-action@v1.0.1
         with:
           s3cmd_command: 'ls'
           access_key: ${{ secrets.S3_ACCESS_KEY }}

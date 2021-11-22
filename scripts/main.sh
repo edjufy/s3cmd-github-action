@@ -19,6 +19,9 @@ sed -i s/{{HOST_BASE}}/${hostBase}/g /github/home/.s3cfg
 sed -i s/{{ACCESS_KEY}}/${accessKey}/g /github/home/.s3cfg
 sed -i s/{{SECRET_KEY}}/${secretKey}/g /github/home/.s3cfg
 
+## print version
+s3cmd --version
+
 ## run s3cmd command
 s3cmd ${s3cmdCommand}
 

@@ -24,7 +24,7 @@ inputs:
     default: 'US'
 runs:
   using: docker
-  image: 'docker://ghcr.io/edjufy/s3cmd-github-action:1.1.0'
+  image: 'docker://ghcr.io/edjufy/s3cmd-github-action:1.1.1'
   args:
     - ${{ inputs.s3cmd_command }}
     - ${{ inputs.access_key }}

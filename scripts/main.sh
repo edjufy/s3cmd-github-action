@@ -22,6 +22,9 @@ sed -i s/{{SECRET_KEY}}/${secretKey}/g /github/home/.s3cfg
 ## print version
 s3cmd --version
 
+## print command that will be run
+echo "s3cmd ${s3cmdCommand}"
+
 ## run s3cmd command
 s3cmd ${s3cmdCommand}
 

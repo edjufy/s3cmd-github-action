@@ -1,6 +1,6 @@
 name: "S3cmd GitHub action"
 description: "Use the S3cmd in your GitHub action"
-author: "edjufy GmbH"
+author: "edjufy Software GmbH"
 branding:
   icon: command
   color: green
@@ -24,7 +24,7 @@ inputs:
     default: 'US'
 runs:
   using: docker
-  image: 'docker://ghcr.io/edjufy/s3cmd-github-action:1.0.1'
+  image: 'docker://ghcr.io/edjufy/s3cmd-github-action:1.1.0'
   args:
     - ${{ inputs.s3cmd_command }}
     - ${{ inputs.access_key }}
